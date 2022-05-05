@@ -16,7 +16,6 @@
 package com.tuxiaobei.drawandguess.component;
 
 import com.tuxiaobei.drawandguess.ResourceTable;
-import com.tuxiaobei.drawandguess.bean.DeviceData;
 import com.tuxiaobei.drawandguess.component.listcomponent.CommentViewHolder;
 import com.tuxiaobei.drawandguess.component.listcomponent.ListComponentAdapter;
 import ohos.agp.components.Component;
@@ -29,8 +28,6 @@ import ohos.app.Context;
 import java.util.Arrays;
 
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.List;
 
 import static ohos.agp.components.ComponentContainer.LayoutConfig.MATCH_CONTENT;
@@ -119,13 +116,13 @@ public class WordSelectDialog extends CommonDialog {
     private void componentBonding() {
         operateConfirm.setClickedListener(component -> {
             if (onclickListener != null) {
-                cirDevice();
+                cirWord();
             }
         });
         operateCancel.setClickedListener(component -> hide());
     }
 
-    private void cirDevice() {
+    private void cirWord() {
         onclickListener.onConfirmClick(checkedword);
     }
 

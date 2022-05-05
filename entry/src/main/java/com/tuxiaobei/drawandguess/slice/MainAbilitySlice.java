@@ -142,12 +142,6 @@ public class MainAbilitySlice extends AbilitySlice {
         }
     }
 
-    private void setName(String name) {
-        title.setText(name);
-        local_name = name;
-        nameSingleKvStore.putString(Tools.getDeviceId(this), name);
-    }
-
     private void findComponentById(Boolean isLocal) {
         if (findComponentById(ResourceTable.Id_canvas) instanceof DependentLayout) {
             canvas = (DependentLayout) findComponentById(ResourceTable.Id_canvas);
@@ -303,7 +297,20 @@ public class MainAbilitySlice extends AbilitySlice {
         return isLocal;
     }
 
+    /**
+     * 设置昵称
+     * @param name 昵称
+     */
+    private void setName(String name) {
+        title.setText(name);
+        local_name = name;
+        nameSingleKvStore.putString(Tools.getDeviceId(this), name);
+    }
 
+    /**
+     * 添加答案元素
+     * @param ans
+     */
     public void addAnswer(AnswerItem ans) {
         ans.setDeviceId(Tools.getDeviceId(this));
         ansData.add(0, ans);
@@ -313,6 +320,10 @@ public class MainAbilitySlice extends AbilitySlice {
         }
     }
 
+    /**
+     * 开始新游戏
+     * @param word 新词语
+     */
     private void newGame(String word) {
         ansData.clear();
         AnswerItem a = new AnswerItem("开始第 " + main_game.getRoundnum() +" 轮游戏了！", 4);
@@ -325,6 +336,10 @@ public class MainAbilitySlice extends AbilitySlice {
         clearBoard();
     }
 
+    /**
+     * 展示答案消息列表
+     * @param answers 答案消息数据
+     */
     private void showAns(List<AnswerItem> answers) {
         if (!isLocal) {
             guesser.checkEnable(answers);
@@ -334,6 +349,9 @@ public class MainAbilitySlice extends AbilitySlice {
         answerItemProvider.notifyDataChanged();
     }
 
+    /**
+     * 清空画板
+     */
     private void clearBoard() {
         List<MyPoint> points = new ArrayList<>(0);
         drawl.setDrawParams(points);
@@ -343,7 +361,9 @@ public class MainAbilitySlice extends AbilitySlice {
         }
     }
 
-    // 获取数据库中的点数据，并在画布上画出来
+    /**
+     * 获取数据库中的点数据，并在画布上画出来
+     */
     private void drawPoints() {
         List<Entry> points = pointsSingleKvStore.getEntries(POINTS_KEY);
         for (Entry entry : points) {
@@ -354,6 +374,9 @@ public class MainAbilitySlice extends AbilitySlice {
         }
     }
 
+    /**
+     * 更新答案消息列表
+     */
     private void updateAnsShow() {
         List<Entry> ans = ansSingleKvStore.getEntries(ANS_KEY);
         for (Entry entry : ans) {
@@ -364,6 +387,11 @@ public class MainAbilitySlice extends AbilitySlice {
         }
     }
 
+    /**
+     * 获取昵称
+     * @param deviceId 设备id
+     * @return 昵称
+     */
     public String getName(String deviceId) {
         if (Tools.getDeviceId(this).equals(deviceId)) {
             if (isLocal) {
@@ -377,12 +405,13 @@ public class MainAbilitySlice extends AbilitySlice {
         }catch (KvStoreException e) {
             ret = deviceId.substring(0, 6);
         }
+        if (ret == null || ret.isEmpty()) {
+            ret = deviceId.substring(0, 6);
+        }
         return ret;
     }
     /**
      * Receive database messages
-     *
-     * @since 2021-04-06
      */
     private class pointsKvStoreObserverClient implements KvStoreObserver {
         @Override
@@ -408,6 +437,9 @@ public class MainAbilitySlice extends AbilitySlice {
         }
     }
 
+    /**
+     * 创建分布式数据库
+     */
     private void initDatabase() {
         // 创建分布式数据库管理对象
         KvManagerConfig config = new KvManagerConfig(this);

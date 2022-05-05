@@ -47,14 +47,14 @@ public class AnswerItemProvider extends BaseItemProvider{
         String ret = null;
         boolean myans = sampleItem.getDeviceId().equals(Tools.getDeviceId(slice));
         switch (sampleItem.getStatus()) {
-            case 1:
+            case 1: //错误答案
                 ret = sampleItem.getAns();
                 text = (Text) cpt.findComponentById(ResourceTable.Id_item_wa);
                 break;
-            case 4:
+            case 4: //系统消息
                 ret = sampleItem.getAns();
                 break;
-            case 2:
+            case 2: //相似答案
                 if (myans) {
                     ret = "你的答案很接近了：" + sampleItem.getAns();
                 } else if (isLocal){
@@ -64,8 +64,7 @@ public class AnswerItemProvider extends BaseItemProvider{
                 }
                 text = (Text) cpt.findComponentById(ResourceTable.Id_item_sim);
                 break;
-            case 3:
-
+            case 3: //正确答案
                 if (myans) {
                     ret = "恭喜你回答正确！";
                 } else {
@@ -73,7 +72,6 @@ public class AnswerItemProvider extends BaseItemProvider{
                 }
                 text = (Text) cpt.findComponentById(ResourceTable.Id_item_ok);
                 break;
-
         }
         if (ret != null) {
             text.setText(slice.getName(sampleItem.getDeviceId()) + ":" + ret);

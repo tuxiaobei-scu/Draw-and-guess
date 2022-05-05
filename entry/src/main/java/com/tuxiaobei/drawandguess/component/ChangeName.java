@@ -92,6 +92,7 @@ public class ChangeName extends CommonDialog {
                 .parse(ResourceTable.Layout_dialog_layout_name, null, false);
         if (rootView.findComponentById(ResourceTable.Id_name) instanceof TextField) {
             name = (TextField) rootView.findComponentById(ResourceTable.Id_name);
+            name.setTextCursorVisible(false);
         }
         if (rootView.findComponentById(ResourceTable.Id_operate_yes) instanceof Text) {
             operateConfirm = (Text) rootView.findComponentById(ResourceTable.Id_operate_yes);

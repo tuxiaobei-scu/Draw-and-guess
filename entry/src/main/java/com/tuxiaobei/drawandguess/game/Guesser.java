@@ -30,16 +30,16 @@ public class Guesser extends Ability{
         this.tip = tip;
         this.score = 0;
         this.show_score = show_score;
-        submit.setClickedListener(component -> {
+        submit.setClickedListener(component -> { //监听提交答案
             String answer = ans.getText();
             ans.setText("");
             if (!answer.isEmpty() && enable) {
                 AnswerItem a = new AnswerItem(answer, 0);
                 checkAnswer(a);
+                ans.clearFocus();
                 if (a.getStatus() == 3) {
                     ans.setVisibility(Component.HIDE);
                     submit.setVisibility(Component.HIDE);
-                    ans.clearFocus();
                     ans.setTextCursorVisible(false);
                     ans.setEnabled(false);
                     tip.setText("恭喜你答对了！");
@@ -58,13 +58,16 @@ public class Guesser extends Ability{
         enable = false;
     }
 
+    /**
+     * 判断新一局游戏是否开始
+     * @param answers 答案消息数据
+     */
     public void checkEnable(List<AnswerItem> answers) {
         for (AnswerItem answer : answers) {
             if (answer.getStatus() == 4 && !answer.getRid().equals(nowroundid)) {
                 ans.setVisibility(Component.VISIBLE);
                 submit.setVisibility(Component.VISIBLE);
                 tip.setVisibility(Component.HIDE);
-                //submit.setTextCursorVisible(true);
                 ans.setEnabled(true);
                 ans.setTextCursorVisible(true);
                 enable = true;
@@ -74,6 +77,12 @@ public class Guesser extends Ability{
         }
     }
 
+    /**
+     * 动态规划计算编辑距离
+     * @param a 字符串A
+     * @param b 字符串B
+     * @return 编辑距离
+     */
     private int getLevenshteinDistance(String a, String b) {
         int la = a.length(), lb = b.length();
         int[][] f = new int[la + 1][lb + 1];
@@ -94,6 +103,10 @@ public class Guesser extends Ability{
 
     }
 
+    /**
+     * 答案判定
+     * @param answer 答案
+     */
     public void checkAnswer(AnswerItem answer) {
         if (answer.getStatus() > 0) {
             return;

@@ -15,6 +15,7 @@
         ohos:top_margin="3vp"
         ohos:text_size="20fp"
         ohos:layout_alignment="left"
+        ohos:multiple_lines="true"
         ohos:background_element="$graphic:background_answer"
         ohos:visibility="hide"/>
     <Text
@@ -26,6 +27,7 @@
         ohos:top_margin="3vp"
         ohos:text_size="20fp"
         ohos:layout_alignment="left"
+        ohos:multiple_lines="true"
         ohos:background_element="$graphic:background_answer_ok"
         ohos:visibility="hide"/>
     <Text
@@ -37,6 +39,7 @@
         ohos:top_margin="3vp"
         ohos:text_size="20fp"
         ohos:layout_alignment="left"
+        ohos:multiple_lines="true"
         ohos:background_element="$graphic:background_answer_sim"
         ohos:visibility="hide"/>
     <Text
@@ -48,6 +51,7 @@
         ohos:top_margin="3vp"
         ohos:text_size="20fp"
         ohos:layout_alignment="left"
+        ohos:multiple_lines="true"
         ohos:background_element="$graphic:background_answer_wa"
         ohos:visibility="hide"/>
 </DirectionalLayout>
