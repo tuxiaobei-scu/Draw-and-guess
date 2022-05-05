@@ -3,13 +3,13 @@
   <component name="FacetManager">
     <facet type="harmony" name="harmony">
       <configuration>
-        <option name="SELECTED_BUILD_VARIANT" value="release" />
-        <option name="ASSEMBLE_TASK_NAME" value="assembleRelease" />
-        <option name="GENERATE_RESOURCES_TASK_NAME" value="generateReleaseResources" />
-        <option name="RESOURCES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../entry/src/main/resources;file://$MODULE_DIR$/../../../entry/src/release/resources" />
-        <option name="OHOS_TEST_RESOURCES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../entry/src/main/resources" />
+        <option name="SELECTED_BUILD_VARIANT" value="debug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
+        <option name="GENERATE_RESOURCES_TASK_NAME" value="generateDebugResources" />
+        <option name="RESOURCES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../entry/src/main/resources;file://$MODULE_DIR$/../../../entry/src/debug/resources" />
+        <option name="OHOS_TEST_RESOURCES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../entry/src/ohosTest/resources;file://$MODULE_DIR$/../../../entry/src/debugOhosTest/resources" />
         <option name="MODULE_TYPE" value="entry" />
-        <option name="DEBUGGABLE" value="false" />
+        <option name="DEBUGGABLE" value="true" />
         <option name="HAP_OUTPUT_FOLDER_PATH" />
         <option name="PREVIEW_EXECUTE_TASK_NAME" />
         <option name="JS_MANIFEST_PATH" />
@@ -43,13 +43,16 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/../../../entry/build/intermediates/javac/release/classes" />
-    <output-test url="file://$MODULE_DIR$/../../../entry/build/intermediates/javac/releaseTest/classes" />
+    <output url="file://$MODULE_DIR$/../../../entry/build/intermediates/javac/debug/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../entry/build/intermediates/javac/debugTest/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../entry">
-      <sourceFolder url="file://$MODULE_DIR$/../../../entry/build/generated/source/annotation/release" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../entry/build/generated/source/buildConfig/release" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../entry/build/generated/source/idl/release" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../entry/build/generated/source/annotation/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../entry/build/generated/source/annotation/debugOhosTest" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../entry/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../entry/build/generated/source/buildConfig/debugOhosTest" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../entry/build/generated/source/idl/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../entry/build/generated/source/idl/debugOhosTest" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../entry/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../entry/src/main/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/../../../entry/.gradle" />
@@ -60,6 +63,7 @@
     <orderEntry type="jdk" jdkName="SDK(API Version 6)" jdkType="SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="Gradle: gson-2.8.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: runner-2.0.0.200@har" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: hamcrest-core-1.3" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: junit-4.13.1" level="project" />
   </component>
