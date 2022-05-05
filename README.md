@@ -24,7 +24,7 @@ by tuxiaobei
 
 ### 选择词语开始游戏并绘画
 
-选择词语：系统将从词库中随机选择三个词语共绘画者选择，为避免刷词语的情况出现，只有当选择词语开始游戏后词语才会重新生成。
+选择词语：系统将从词库中随机选择三个词语共绘画者选择，为避免刷词语的情况出现，只有当选择词语开始游戏后词语才会重新随机生成新的词语。
 
 生成的词语保证三个词语两两不同，且上一轮出现过的词语不会再次出现。
 
@@ -60,7 +60,7 @@ by tuxiaobei
 
 ### 更改昵称
 
-猜测着默认生成一个长度为 6 的ID。
+猜测者默认生成一个长度为 6 的ID。
 
 可以自定义自己的名称，自定义的名称实时同步。
 
@@ -341,7 +341,7 @@ private void initDatabase() {
 }
 ```
 
-### `AnswerItemProvider`：
+### `AnswerItemProvider`
 
 ```java
 public Component getComponent(int position, Component convertComponent, ComponentContainer componentContainer) {
