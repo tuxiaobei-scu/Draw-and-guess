@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources> 
+  <string name="app_name">"你画我猜"</string>
+  <string name="mainability_description">"Java_Phone_Empty Feature Ability"</string>
+</resources>

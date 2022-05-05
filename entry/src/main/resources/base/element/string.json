@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "你画我猜"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "back",
+      "value": "撤回"
+    },
+    {
+      "name": "title",
+      "value": "本地绘图"
+    },
+    {
+      "name": "shareDevice",
+      "value": "选择共享设备"
+    },
+    {
+      "name": "select_the_word",
+      "value": "选择你想要绘画的词语"
+    },
+    {
+      "name": "cancels",
+      "value": "取消"
+    },
+    {
+      "name": "yes",
+      "value": "确定"
+    },
+    {
+      "name": "readwords_description",
+      "value": "hap sample empty provider"
+    }
+  ]
+}

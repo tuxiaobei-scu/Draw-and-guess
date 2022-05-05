@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:background_element="#eeeeee"
+    ohos:height="match_parent"
+    ohos:id="$+id:all"
+    ohos:width="match_parent"
+    >
+
+    <DependentLayout
+        ohos:background_element="#FFFFFF"
+        ohos:height="50vp"
+        ohos:id="$+id:header"
+        ohos:left_padding="15vp"
+        ohos:right_padding="15vp"
+        ohos:orientation="horizontal"
+        ohos:alignment="horizontal_center"
+        ohos:width="match_content">
+
+        <Image
+            ohos:align_parent_right="true"
+            ohos:height="match_content"
+            ohos:id="$+id:transform"
+            ohos:image_src="$media:icon_transform"
+            ohos:left_padding="5vp"
+            ohos:vertical_center="true"
+            ohos:text_alignment="center"
+            ohos:width="match_content" />
+        <Image
+            ohos:align_parent_right="true"
+            ohos:visibility="hide"
+            ohos:height="match_content"
+            ohos:id="$+id:change_name"
+            ohos:image_src="$media:ic_public_edit"
+            ohos:left_padding="5vp"
+            ohos:vertical_center="true"
+            ohos:text_alignment="center"
+            ohos:width="match_content" />
+        <Image
+            ohos:start_of="$+id:transform"
+            ohos:right_padding="5vp"
+            ohos:left_padding="5vp"
+            ohos:height="50vp"
+            ohos:id="$+id:play"
+            ohos:image_src="$media:ic_public_play"
+            ohos:vertical_center="true"
+            ohos:text_alignment="center"
+            ohos:width="match_content" />
+        <Text
+            ohos:width="match_content"
+            ohos:height="match_content"
+            ohos:text_size="18fp"
+            ohos:id="$+id:show_score"
+            ohos:vertical_center="true"
+            ohos:text_alignment="center"
+            ohos:horizontal_center="true"
+            ohos:visibility="hide"
+            ohos:text="得分:0 "
+            />
+
+        <Button
+            ohos:width="match_content"
+            ohos:height="match_content"
+            ohos:text_size="18fp"
+            ohos:id="$+id:back"
+            ohos:text="$string:back"
+            ohos:vertical_center="true"
+            ohos:text_alignment="center"
+            ohos:horizontal_center="true"
+            />
+
+
+        <Text
+            ohos:align_parent_left="true"
+            ohos:height="match_content"
+            ohos:id="$+id:title"
+            ohos:text="$string:title"
+            ohos:text_color="#222222"
+            ohos:text_size="18fp"
+            ohos:vertical_center="true"
+            ohos:width="match_content" />
+
+    </DependentLayout>
+
+    <DirectionalLayout
+        ohos:id="$+id:switchcolor"
+        ohos:width="match_parent"
+        ohos:height="40vp"
+        ohos:alignment="horizontal_center"
+        ohos:orientation="horizontal"
+        ohos:top_padding="5vp"
+        ohos:bottom_padding="5vp"
+        ohos:background_element="#FFFFFF"
+        ohos:below="$+id:header">
+        <Button
+            ohos:id="$+id:red"
+            ohos:visibility="hide"
+            ohos:width="30vp"
+            ohos:height="30vp"
+            ohos:text_size="25fp"
+            ohos:text_weight="1000"
+            ohos:background_element="#FF0000"
+            ohos:text="+"
+            ohos:text_color="#FFFFFF"/>
+        <Button
+            ohos:left_margin="15vp"
+            ohos:visibility="hide"
+            ohos:id="$+id:green"
+            ohos:width="30vp"
+            ohos:height="30vp"
+            ohos:text_size="25fp"
+            ohos:text_weight="1000"
+            ohos:background_element="#00FF00"
+            ohos:text=""
+            ohos:text_color="#FFFFFF"/>
+        <Button
+            ohos:left_margin="15vp"
+            ohos:visibility="hide"
+            ohos:id="$+id:blue"
+            ohos:width="30vp"
+            ohos:height="30vp"
+            ohos:text_size="25fp"
+            ohos:text_weight="1000"
+            ohos:background_element="#0000FF"
+            ohos:text=""
+            ohos:text_color="#FFFFFF"/>
+        <Button
+            ohos:left_margin="15vp"
+            ohos:visibility="hide"
+            ohos:id="$+id:yellow"
+            ohos:width="30vp"
+            ohos:height="30vp"
+            ohos:text_size="25fp"
+            ohos:text_weight="1000"
+            ohos:background_element="#FFFF00"
+            ohos:text=""
+            ohos:text_color="#000000"/>
+        <Button
+            ohos:left_margin="15vp"
+            ohos:visibility="hide"
+            ohos:id="$+id:pink"
+            ohos:width="30vp"
+            ohos:height="30vp"
+            ohos:text_size="25fp"
+            ohos:text_weight="1000"
+            ohos:background_element="#FF00FF"
+            ohos:text=""
+            ohos:text_color="#FFFFFF"/>
+        <Button
+            ohos:left_margin="15vp"
+            ohos:visibility="hide"
+            ohos:id="$+id:cyan"
+            ohos:width="30vp"
+            ohos:height="30vp"
+            ohos:text_size="25fp"
+            ohos:text_weight="1000"
+            ohos:background_element="#00FFFF"
+            ohos:text=""
+            ohos:text_color="#000000"/>
+        <Button
+            ohos:left_margin="15vp"
+            ohos:visibility="hide"
+            ohos:id="$+id:black"
+            ohos:width="30vp"
+            ohos:height="30vp"
+            ohos:text_size="25fp"
+            ohos:text_weight="1000"
+            ohos:background_element="#000000"
+            ohos:text=""
+            ohos:text_color="#FFFFFF"/>
+        <TextField
+            ohos:id="$+id:ans"
+            ohos:visibility="hide"
+            ohos:height="30vp"
+            ohos:width="225vp"
+            ohos:background_element="$graphic:background_text_field"
+            ohos:left_padding="20vp"
+            ohos:text_size="15fp"
+            ohos:hint="请输入答案"
+            ohos:element_cursor_bubble="$graphic:ele_cursor_bubble"
+            ohos:text_alignment="vertical_center"
+            />
+        <Button
+            ohos:id="$+id:submit"
+            ohos:visibility="hide"
+            ohos:width="match_content"
+            ohos:height="30vp"
+            ohos:text_size="15fp"
+            ohos:text_color="#FFFFFF"
+            ohos:text="提交"
+            ohos:background_element="$graphic:capsule_button_element"
+            ohos:left_margin="15vp"
+            ohos:right_padding="8vp"
+            ohos:left_padding="8vp"
+            />
+        <Text
+            ohos:id="$+id:tip"
+            ohos:visibility="hide"
+            ohos:width="match_content"
+            ohos:height="match_content"
+            ohos:text="游戏尚未开始"
+            ohos:vertical_center="true"
+            ohos:text_alignment="center"
+            ohos:horizontal_center="true"
+            ohos:text_size="18fp"/>
+
+    </DirectionalLayout>
+    <DependentLayout
+        ohos:background_element="#eeeeee"
+        ohos:height="match_parent"
+        ohos:id="$+id:canvas"
+        ohos:width="match_parent"
+        ohos:above="$+id:anslist"
+        ohos:below="$+id:switchcolor"
+        >
+    </DependentLayout>
+
+
+
+    <DependentLayout
+        ohos:height="match_content"
+        ohos:id="$+id:anslist"
+        ohos:width="match_parent"
+        ohos:align_parent_bottom="true"
+        >
+        <ListContainer
+            ohos:id="$+id:list_answers"
+            ohos:height="150vp"
+            ohos:width="match_parent"
+            ohos:background_element="#FFFFFF"
+            ohos:weight="1"
+            ohos:layout_alignment="left"/>
+
+    </DependentLayout>
+</DependentLayout>
